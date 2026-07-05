@@ -41,3 +41,20 @@ Guide:
 ```text
 docs/multirepo-planning/user-guide.md
 ```
+
+### Domain Specs
+
+Provides a `domain-specs` preset that wraps `/speckit.specify` so new features
+are created under `specs/<domain>/<feature>` with explicit domain selection.
+
+Install locally during development:
+
+```bash
+specify preset add --dev ./presets/domain-specs --priority 10
+```
+
+Preset manifest:
+
+```text
+presets/domain-specs/preset.yml
+```
