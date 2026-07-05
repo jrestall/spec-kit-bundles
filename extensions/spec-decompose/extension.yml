@@ -1,0 +1,39 @@
+schema_version: "1.0"
+
+extension:
+  id: "spec-decompose"
+  name: "Spec Decompose"
+  version: "0.1.0"
+  description: "Turn large PRDs or parent specs into a backlog of nested child Spec Kit specs."
+  category: "process"
+  effect: "read-write"
+  author: "local"
+  repository: "https://github.com/jrestall/spec-kit-bundles"
+  license: "MIT"
+
+requires:
+  speckit_version: ">=0.9.0"
+
+provides:
+  commands:
+    - name: "speckit.spec-decompose.decompose"
+      file: "commands/speckit.spec-decompose.md"
+      description: "Create a spec-of-specs backlog with child Spec Kit specs"
+      aliases:
+        - "speckit.spec-decompose"
+        - "speckit.create-epics-and-specs"
+  templates:
+    - name: "backlog-template"
+      file: "templates/backlog-template.md"
+      description: "Parent backlog map for nested child specs"
+      strategy: "replace"
+    - name: "child-spec-template"
+      file: "templates/child-spec-template.md"
+      description: "Child spec template for decomposed initiatives"
+      strategy: "replace"
+
+tags:
+  - "planning"
+  - "backlog"
+  - "nested-specs"
+  - "specs"

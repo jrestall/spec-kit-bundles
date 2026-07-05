@@ -31,11 +31,11 @@ mkdir -p "$ROOT/.specify"
 GITIGNORE="$ROOT/.gitignore"
 touch "$GITIGNORE"
 NEEDS_IGNORE_HEADER=false
-grep -qxF "specs/*/workset.local.yml" "$GITIGNORE" || NEEDS_IGNORE_HEADER=true
+grep -qxF "specs/**/workset.local.yml" "$GITIGNORE" || NEEDS_IGNORE_HEADER=true
 if $NEEDS_IGNORE_HEADER; then
   [[ ! -s "$GITIGNORE" ]] || printf '\n' >> "$GITIGNORE"
   printf '# Local multi-repo planning overrides\n' >> "$GITIGNORE"
-  grep -qxF "specs/*/workset.local.yml" "$GITIGNORE" || printf 'specs/*/workset.local.yml\n' >> "$GITIGNORE"
+  grep -qxF "specs/**/workset.local.yml" "$GITIGNORE" || printf 'specs/**/workset.local.yml\n' >> "$GITIGNORE"
 fi
 
 SPECS_REPO_ID="$SPECS_REPO_ID" REMOTE="$REMOTE" python3 - "$ROOT/.specify/specs-repo.json" <<'PY'

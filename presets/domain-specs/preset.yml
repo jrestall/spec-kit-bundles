@@ -4,7 +4,7 @@ preset:
   id: "domain-specs"
   name: "Domain Specs"
   version: "0.1.0"
-  description: "Creates Spec Kit features under specs/<domain>/<feature> with explicit domain selection."
+  description: "Adds optional domain taxonomy guidance without constraining parent/child spec paths."
   author: "local"
   repository: "https://github.com/jrestall/spec-kit-bundles"
   license: "MIT"
@@ -17,10 +17,11 @@ provides:
     - type: "command"
       name: "speckit.specify"
       file: "commands/speckit.specify.md"
-      description: "Domain-aware specify workflow"
+      description: "Taxonomy-aware specify workflow"
       strategy: "wrap"
 
 tags:
   - "domain"
+  - "taxonomy"
   - "specs"
-  - "workflow"
+  - "nested-specs"

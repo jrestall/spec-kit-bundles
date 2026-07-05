@@ -12,4 +12,7 @@ $ARGUMENTS
 
 Run `{SCRIPT} $ARGUMENTS --json`.
 
-Read the returned `spec`, `plan`, `tasks`, and `workset` paths before implementing. If the command reports a missing specs repo or spec, stop and show the fix instead of guessing paths.
+Read the returned `spec`, `plan`, `tasks`, and `workset` paths before
+implementing. The resolved spec may be a parent spec or a nested child spec
+under `specs/<parent>/specs/<child>`. If the command reports a missing specs
+repo or spec, stop and show the fix instead of guessing paths.

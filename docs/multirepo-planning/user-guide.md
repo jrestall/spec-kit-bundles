@@ -97,7 +97,7 @@ to `.specify/specs-repo.json`, registers this checkout in the local machine
 registry, and adds ignore rules for:
 
 ```gitignore
-specs/*/workset.local.yml
+specs/**/workset.local.yml
 ```
 
 From inside the planning repo, you do not need to pass a specs repo flag. The
@@ -163,8 +163,9 @@ explicitly:
 
 `--spec` is optional once Spec Kit has selected a feature. The selected
 feature is stored in `.specify/feature.json`, which points at the active
-`specs/<feature>/` directory. Pass `--spec <feature-dir>` only when you want
-to override that selection.
+feature directory. For a decomposed initiative, that active directory can be a
+nested child such as `specs/001-parent/specs/001-child`. Pass
+`--spec <feature-dir>` when you want to override the selection.
 
 Before running `/speckit.plan` for a multi-repo feature, commit a
 `workset.yml` beside the spec:

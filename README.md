@@ -44,8 +44,9 @@ docs/multirepo-planning/user-guide.md
 
 ### Domain Specs
 
-Provides a `domain-specs` preset that wraps `/speckit.specify` so new features
-are created under `specs/<domain>/<feature>` with explicit domain selection.
+Provides a compatibility `domain-specs` preset that records optional domain
+metadata without owning the spec path shape. Nested parent/child spec structure
+is handled by `/speckit-spec-decompose`.
 
 Install locally during development:
 
@@ -57,4 +58,45 @@ Preset manifest:
 
 ```text
 presets/domain-specs/preset.yml
+```
+
+### PRD
+
+Provides a `prd` extension with `/speckit-prd` for creating, updating, and
+validating product requirements documents in Spec Kit workspaces.
+
+Install locally during development:
+
+```bash
+specify extension add --dev ./extensions/prd
+```
+
+Guide:
+
+```text
+docs/prd/user-guide.md
+```
+
+### Spec Decompose
+
+Provides a `spec-decompose` extension with `/speckit-spec-decompose` for
+turning large PRDs or parent specs into `backlog.md` plus nested child Spec Kit
+specs under `specs/<parent>/specs/<child>/`.
+
+Install locally during development:
+
+```bash
+specify extension add --dev ./extensions/spec-decompose
+```
+
+Bundle manifest:
+
+```text
+bundles/planning-method/bundle.yml
+```
+
+Guide:
+
+```text
+docs/spec-decompose/user-guide.md
 ```

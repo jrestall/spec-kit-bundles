@@ -1,0 +1,36 @@
+schema_version: "1.0"
+
+extension:
+  id: "prd"
+  name: "PRD Workflow"
+  version: "0.1.0"
+  description: "Create, update, or validate product requirements documents using Spec Kit artifacts."
+  category: "process"
+  effect: "read-write"
+  author: "local"
+  repository: "https://github.com/jrestall/spec-kit-bundles"
+  license: "MIT"
+
+requires:
+  speckit_version: ">=0.9.0"
+
+provides:
+  commands:
+    - name: "speckit.prd.prd"
+      file: "commands/speckit.prd.md"
+      description: "Create, update, or validate a product requirements document"
+      aliases: ["speckit.prd"]
+  templates:
+    - name: "prd-template"
+      file: "templates/prd-template.md"
+      description: "Spec Kit PRD authoring template"
+      strategy: "replace"
+    - name: "prd-validation-rubric"
+      file: "templates/prd-validation-rubric.md"
+      description: "Judgment rubric for PRD validation"
+      strategy: "replace"
+
+tags:
+  - "planning"
+  - "prd"
+  - "requirements"

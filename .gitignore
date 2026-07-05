@@ -1,4 +1,4 @@
-specs/*/*/workset.local.yml
+specs/**/workset.local.yml
 
 # Local/vendor checkouts
 /spec-kit/

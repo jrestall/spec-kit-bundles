@@ -1,13 +1,16 @@
 # Domain Specs Preset Configuration
 #
-# Specs created by this preset live at:
-#   specs/<domain>/<feature>
+# Domain taxonomy is metadata only. This preset no longer controls paths.
+# Parent specs normally live at:
+#   specs/<feature>
 #
-# Domain selection is mandatory. The AI must infer one of the allowed domains
-# from the user's prompt or ask the user to choose. There is intentionally no
-# default domain.
+# Child specs created by /speckit-spec-decompose live at:
+#   specs/<parent-feature>/specs/<child-feature>
+#
+# Domain selection is optional. The AI may infer one configured domain when it
+# is clear, but must not block spec creation just to collect taxonomy.
 
-numbering_scope: "domain"
+numbering_scope: "feature"
 
 allowed_domains:
   - id: "checkout"
