@@ -1,0 +1,6 @@
+schema: spec-driven
+
+context: |
+  Store role: shared planning home for work that spans multiple repos.
+  Member repos: web-app, api-server.
+  Example feature: checkout order creation.

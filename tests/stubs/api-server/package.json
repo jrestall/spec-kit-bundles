@@ -1,0 +1,13 @@
+{
+  "name": "api-server",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx src/server.ts"
+  },
+  "dependencies": {
+    "tsx": "latest",
+    "typescript": "latest"
+  },
+  "devDependencies": {}
+}

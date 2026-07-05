@@ -1,0 +1,6 @@
+store: team-planning
+
+context: |
+  Repo role: React checkout frontend.
+  Planning home: external OpenSpec store `team-planning`.
+  Expected API integration: POST /orders on api-server.

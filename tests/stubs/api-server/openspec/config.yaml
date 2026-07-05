@@ -1,0 +1,9 @@
+schema: spec-driven
+
+references:
+  - team-planning
+
+context: |
+  Repo role: TypeScript API server.
+  Local OpenSpec work belongs in this repo.
+  Shared product requirements are read from the `team-planning` store.

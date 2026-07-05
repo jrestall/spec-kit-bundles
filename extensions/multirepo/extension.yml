@@ -1,0 +1,53 @@
+schema_version: "1.0"
+
+extension:
+  id: "multirepo"
+  name: "Multi-Repo Planning"
+  version: "0.1.0"
+  description: "Registers specs repos, resolves shared specs, and opens per-spec worksets."
+  author: "local"
+  repository: "https://github.com/jrestall/spec-kit-bundles"
+  license: "MIT"
+
+requires:
+  speckit_version: ">=0.9.0"
+
+provides:
+  commands:
+    - name: "speckit.multirepo.specs-repo-setup"
+      file: "commands/speckit.multirepo.specs-repo-setup.md"
+      description: "Mark this Spec Kit project as a specs repo and register it locally"
+      aliases: ["speckit.specs-repo-setup"]
+    - name: "speckit.multirepo.specs-repo-register"
+      file: "commands/speckit.multirepo.specs-repo-register.md"
+      description: "Register an existing specs repo checkout on this machine"
+      aliases: ["speckit.specs-repo-register"]
+    - name: "speckit.multirepo.specs-repo-list"
+      file: "commands/speckit.multirepo.specs-repo-list.md"
+      description: "List locally registered specs repos"
+      aliases: ["speckit.specs-repo-list"]
+    - name: "speckit.multirepo.specs-repo-doctor"
+      file: "commands/speckit.multirepo.specs-repo-doctor.md"
+      description: "Check specs repo registry and checkout health"
+      aliases: ["speckit.specs-repo-doctor"]
+    - name: "speckit.multirepo.spec-select"
+      file: "commands/speckit.multirepo.spec-select.md"
+      description: "Resolve or select a spec in a specs repo"
+      aliases: ["speckit.spec-select"]
+    - name: "speckit.multirepo.context"
+      file: "commands/speckit.multirepo.context.md"
+      description: "Print planning context for the resolved specs repo/spec"
+      aliases: ["speckit.context"]
+    - name: "speckit.multirepo.workset-open"
+      file: "commands/speckit.multirepo.workset-open.md"
+      description: "Open the per-spec workset in an editor or agent harness"
+      aliases: ["speckit.workset-open"]
+    - name: "speckit.multirepo.workset-doctor"
+      file: "commands/speckit.multirepo.workset-doctor.md"
+      description: "Validate a per-spec workset and local overrides"
+      aliases: ["speckit.workset-doctor"]
+
+tags:
+  - "planning"
+  - "multi-repo"
+  - "workset"

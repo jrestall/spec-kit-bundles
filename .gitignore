@@ -1,0 +1,18 @@
+specs/*/*/workset.local.yml
+
+# Local/vendor checkouts
+/spec-kit/
+/openspec/
+/spec-kit-multirepo-planning/
+
+# Generated Spec Kit install/integration outputs. Canonical package sources live
+# at the repository root under extensions/, presets/, bundles/, and workflows/.
+/.agents/
+/.github/agents/
+/.github/prompts/
+/.specify/extensions/
+/.specify/presets/
+/.specify/workflows/
+
+# Generated local workspace files
+*.code-workspace

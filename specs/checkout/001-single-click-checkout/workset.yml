@@ -1,0 +1,24 @@
+version: 1
+name: single-click-checkout-default
+description: "Default implementation workset for single click checkout"
+members:
+  - name: planning
+    role: planning
+    path: ../../..
+  - name: web-app
+    role: implementation
+    repo: web-app
+    path: ../../../tests/stubs/web-app
+  - name: api-server
+    role: implementation
+    repo: api-server
+    path: ../../../tests/stubs/api-server
+task_routing:
+  web-app:
+    selectors:
+      - "## web-app"
+      - "[repo:web-app]"
+  api-server:
+    selectors:
+      - "## api-server"
+      - "[repo:api-server]"

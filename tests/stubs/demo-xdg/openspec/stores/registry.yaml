@@ -1,0 +1,6 @@
+version: 1
+stores:
+  team-planning:
+    backend:
+      type: git
+      local_path: /Users/jrestall/repos/speckit-store/tests/stubs/planning

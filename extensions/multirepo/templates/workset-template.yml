@@ -1,0 +1,32 @@
+version: 1
+name: "[feature]-default"
+description: "Default implementation workset for this spec"
+members:
+  - name: planning
+    role: planning
+    specsRepo: "[specs-repo-id]"
+    path: ../..
+  - name: web-app
+    role: implementation
+    repo: web-app
+    remote: git@github.com:org/web-app.git
+    path: ../../../web-app
+  - name: api-server
+    role: implementation
+    repo: api-server
+    remote: git@github.com:org/api-server.git
+    path: ../../../api-server
+  - name: design-system
+    role: reference
+    repo: design-system
+    remote: git@github.com:org/design-system.git
+    path: ../../../design-system
+task_routing:
+  web-app:
+    selectors:
+      - "## web-app"
+      - "[repo:web-app]"
+  api-server:
+    selectors:
+      - "## api-server"
+      - "[repo:api-server]"

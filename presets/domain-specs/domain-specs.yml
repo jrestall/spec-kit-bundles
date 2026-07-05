@@ -1,0 +1,21 @@
+# Domain Specs Preset Configuration
+#
+# Specs created by this preset live at:
+#   specs/<domain>/<feature>
+#
+# Domain selection is mandatory. The AI must infer one of the allowed domains
+# from the user's prompt or ask the user to choose. There is intentionally no
+# default domain.
+
+numbering_scope: "domain"
+
+allowed_domains:
+  - id: "checkout"
+    name: "Checkout"
+    description: "Cart, payment, order placement, fulfillment handoff, and purchase completion flows."
+  - id: "catalog"
+    name: "Catalog"
+    description: "Product discovery, product details, search, filtering, pricing display, and merchandising."
+  - id: "identity"
+    name: "Identity"
+    description: "Authentication, authorization, account lifecycle, profile, sessions, and permissions."

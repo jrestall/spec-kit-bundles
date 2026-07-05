@@ -1,0 +1,11 @@
+version: 1
+worksets:
+  checkout-demo:
+    tool: code
+    members:
+      - name: planning
+        path: /Users/jrestall/repos/speckit-store/tests/stubs/planning
+      - name: web-app
+        path: /Users/jrestall/repos/speckit-store/tests/stubs/web-app
+      - name: api-server
+        path: /Users/jrestall/repos/speckit-store/tests/stubs/api-server
